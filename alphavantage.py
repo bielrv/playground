@@ -6,9 +6,11 @@ import sys
 import os
 import numpy as np
 
-ts = TimeSeries(key='1ORS1XLM1YK1GK9Y') # Not my key ;)
+from dotenv import load_dotenv
+load_dotenv()
 
-# Get json object with the intraday data and another with  the call's metadata
-data, meta_data = ts.get_intraday('0RTH.ILN')
-
-data
+class stock:
+     def __init__(self,stock_code):
+         self.stock_code = stock_code
+         ts = TimeSeries(key=os.getenv("alpha_vantage_key_2"), output_format='pandas')
+         self.df, self.meta_data = ts.get_intraday(stock_code,interval='60min', outputsize='full')
