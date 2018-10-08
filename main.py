@@ -13,6 +13,7 @@ class data():
 
         from alpha_api import alpha_stock
         stocks = alpha_stock()
+        stocks.df.shape
         dataframe_to_csv('stocks', stocks.df)
 
         complete_df = trends.df.join(stocks.df)
