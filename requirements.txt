@@ -35,7 +35,7 @@ jupyter-core==4.4.0
 kappa==0.6.0
 kiwisolver==1.0.1
 lambda-packages==0.20.0
-lxml==4.2.5
+lxml==4.6.5
 MarkupSafe==1.0
 matplotlib==3.0.0
 mistune==0.8.3
